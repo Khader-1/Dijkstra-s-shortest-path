@@ -13,7 +13,7 @@ import javafx.stage.StageStyle;
  *
  * @author Khader
  */
-public class Graph extends Application {
+public class Main extends Application {
 
     private static Stage stage;
     final private static Router ROUTER = new Router();
@@ -22,14 +22,18 @@ public class Graph extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = (new Router().view(component("canvas/Canvas")));
+        FXMLLoader loader = (new Router().view(component("layout/Layout")));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         stage.setResizable(true);
         stage.setOpacity(1);
-        Graph.stage = stage;
+        stage.setWidth(1000);
+        stage.setHeight(800);
+        stage.centerOnScreen();
+        Main.stage = stage;
+        System.out.println("kk");
     }
 
     public static void main(String[] args) {

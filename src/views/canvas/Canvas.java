@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Set;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
@@ -16,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import model.Graph;
 
 public class Canvas implements Initializable {
 
@@ -70,6 +72,7 @@ public class Canvas implements Initializable {
             hideOptions();
         });
         delete.setOnMouseClicked((event) -> {
+            focused.unlink();
             verteces.remove(focused.getName());
             canvas.getChildren().remove(focused);
             hideOptions();
@@ -78,14 +81,23 @@ public class Canvas implements Initializable {
             hideOptions();
             verteces.values().stream().filter((vertex) -> (!vertex.equals(focused))).forEachOrdered((vertex) -> {
                 vertex.setOnMouseClicked((toEvent) -> {
-                    Edge edge = new Edge(focused, vertex, 1.0);
-                    edge.resize();
-                    canvas.getChildren().addAll(edge.getShowable());
-                    for (Node node : edge.getShowable()) {
-                        node.toBack();
+                    boolean check = true;
+                    for (Edge edge : vertex.getEdges()) {
+                        if (edge.getFrom().equals(focused) || edge.getTo().equals(focused)) {
+                            check = false;
+                            break;
+                        }
                     }
-                    focused.addEdge(edge);
-                    vertex.addEdge(edge);
+                    if (check) {
+                        Edge edge = new Edge(focused, vertex, 1.0);
+                        edge.resize();
+                        canvas.getChildren().addAll(edge.getShowable());
+                        for (Node node : edge.getShowable()) {
+                            node.toBack();
+                        }
+                        focused.addEdge(edge);
+                        vertex.addEdge(edge);
+                    }
                     verteces.values().forEach((v) -> {
                         v.setOnMouseClicked((backEvent) -> {
                             viewOptions(v);
@@ -112,7 +124,7 @@ public class Canvas implements Initializable {
                     if (val <= 0) {
                         System.out.println("error");
                     } else {
-                        focsedEdge.getLabel().setText(val + "");
+                        focsedEdge.setVal(val);
                     }
                 }
             }
@@ -191,6 +203,8 @@ public class Canvas implements Initializable {
     }
 
     public static void deleteEdge(Edge edge) {
+        edge.getFrom().getEdges().remove(edge);
+        edge.getTo().getEdges().remove(edge);
         refrence.canvas.getChildren().removeAll(edge.getShowable());
     }
 
@@ -202,5 +216,35 @@ public class Canvas implements Initializable {
         refrence.text.setVisible(true);
         refrence.value.requestFocus();
         refrence.value.setText(label.getText());
+    }
+
+    public static Graph store() {
+        int length = refrence.verteces.size();
+        Graph graph = new Graph(length);
+        Set<String> names = refrence.verteces.keySet();
+        names.forEach((name) -> {
+            refrence.verteces.get(name).setNode(graph.addNode(name));
+        });
+        refrence.verteces.values().forEach((vertex) -> {
+            vertex.getEdges().forEach((edge) -> {
+                graph.addEdge(edge.getFrom().getNode(), edge.getTo().getNode(), edge.getVal());
+            });
+        });
+        return graph;
+    }
+
+    public static void reset() {
+        Vertex[] verteces = new Vertex[refrence.verteces.size()];
+        verteces = refrence.verteces.values().toArray(verteces);
+        for (Vertex vertex : verteces) {
+            delete(vertex);
+        }
+        hideOptions();
+    }
+
+    public static void delete(Vertex vertex) {
+        vertex.unlink();
+        refrence.verteces.remove(vertex.getName());
+        refrence.canvas.getChildren().remove(vertex);
     }
 }

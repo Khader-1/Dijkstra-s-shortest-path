@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxWidth="1.7976931348623157E308" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.layout.HomeController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" style="-fx-background-color: #323232;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: #323232;">
+               <children>
+                  <AnchorPane fx:id="pane" maxWidth="1200.0" minWidth="650.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="1000.0" style="-fx-background-color: #323232;">
+                     <children>
+                        <HBox fx:id="out" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #323232;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+                           <children>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212121; -fx-background-radius: 5; -fx-background-radius: 5;">
+                                 <effect>
+                                    <DropShadow color="#0d727533" />
+                                 </effect>
+                                 <children>
+                                    <Pane fx:id="canvas" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <AnchorPane fx:id="text" layoutX="234.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #323232;" visible="false">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#323232" height="20.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="15.0" />
+                                                <JFXTextField fx:id="value" alignment="CENTER" focusColor="#14ffec" layoutX="-42.0" layoutY="2.0" minHeight="0.0" minWidth="0.0" style="-fx-text-inner-color: #14ffec;" unFocusColor="#323232" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="options" layoutX="107.0" layoutY="47.0" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #323232; -fx-background-radius: 3;" visible="false">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#323232" height="20.0" layoutX="60.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="-10.0" />
+                                                <JFXButton fx:id="delete" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" prefWidth="35.0" style="-fx-background-radius: 3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#0d7377" glyphName="TRASH" size="20" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="move" layoutX="10.0" layoutY="10.0" minWidth="35.0" prefWidth="35.0" style="-fx-background-radius: 3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="0.0">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#0d7377" glyphName="ARROWS" size="20" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="link" layoutX="45.0" layoutY="10.0" minWidth="35.0" prefWidth="35.0" style="-fx-background-radius: 3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="0.0">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#0d7377" glyphName="CHAIN" size="20" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="unlink" layoutX="80.0" layoutY="10.0" minWidth="35.0" prefWidth="35.0" style="-fx-background-radius: 3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="0.0">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="#0d7377" glyphName="CHAIN_BROKEN" size="20" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="edgeMenu" layoutX="85.0" layoutY="82.0" minWidth="70.0" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #323232; -fx-background-radius: 20;" visible="false">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#323232" height="20.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="25.0" />
+                                                <HBox layoutX="-71.0" layoutY="-36.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <JFXButton fx:id="unlinkOne" minHeight="30.0" minWidth="35.0" prefWidth="35.0" style="-fx-background-radius: 20 0 0 20;" textFill="#0d7377">
+                                                         <graphic>
+                                                            <FontAwesomeIconView fill="#0d7377" glyphName="CHAIN_BROKEN" size="18" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="change" minHeight="30.0" minWidth="35.0" prefWidth="35.0" style="-fx-background-radius: 0 20 20 0;" textFill="#0d7377">
+                                                         <graphic>
+                                                            <FontAwesomeIconView fill="#0d7377" glyphName="EDIT" size="18" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </Pane>
+                                    <VBox fx:id="container" layoutX="435.0" layoutY="57.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #323232; -fx-background-radius: 5;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                       <children>
+                                          <JFXButton fx:id="vertex" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="50.0" prefWidth="50.0" ripplerFill="#252525" style="-fx-background-radius: 5;" textFill="#30303000" textOverrun="CLIP">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#0d7377" glyphName="PLUS" size="30" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                       <effect>
+                                          <DropShadow color="#0d727533" />
+                                       </effect>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <AnchorPane layoutX="59.0" layoutY="122.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212121;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="100.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="35.0" layoutY="62.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="Adjacency Matrix" textFill="#0d7377" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane style="-fx-background-color: #f00;">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="672.0" layoutY="500.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #212121; -fx-background-radius: 5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="520.0">
+                           <effect>
+                              <DropShadow color="#0d727533" />
+                           </effect>
+                           <children>
+                              <JFXButton fx:id="play" layoutX="347.0" layoutY="23.0" text="Calc" textFill="#0d7377" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0d7377" glyphName="PLAY" size="18" />
+                                 </graphic>
+                              </JFXButton>
+                              <Label layoutX="50.0" layoutY="46.0" text="Start point : " textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="60.0" layoutY="10.0" text="a" textFill="#0d7377" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="reset" layoutX="480.0" layoutY="25.0" text="Reset" textFill="#0d7377" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0d7377" glyphName="REPEAT" size="18" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="selectStart" layoutX="393.0" layoutY="25.0" text="Select Start" textFill="#0d7377" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0d7377" glyphName="STREET_VIEW" size="18" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="171.0" layoutY="50.0" text="Work Space" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="30.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

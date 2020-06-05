@@ -3,7 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -23,7 +22,7 @@
                   <AnchorPane fx:id="text" layoutX="234.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #323232;" visible="false">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#323232" height="20.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="15.0" />
-                        <JFXTextField fx:id="value" alignment="CENTER" focusColor="#0d7377" layoutX="-42.0" layoutY="2.0" minHeight="0.0" minWidth="0.0" style="-fx-text-inner-color: #0d7377;" unFocusColor="#323232" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <JFXTextField fx:id="value" alignment="CENTER" focusColor="#14ffec" layoutX="-42.0" layoutY="2.0" minHeight="0.0" minWidth="0.0" style="-fx-text-inner-color: #14ffec;" unFocusColor="#323232" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="options" layoutX="107.0" layoutY="47.0" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #323232; -fx-background-radius: 3;" visible="false">
@@ -87,7 +86,4 @@
          </children>
       </AnchorPane>
    </children>
-   <padding>
-      <Insets bottom="50.0" left="50.0" right="50.0" top="40.0" />
-   </padding>
 </HBox>

@@ -9,18 +9,21 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
+import model.Graph;
 
-public class Vertex extends VBox{
+public class Vertex extends VBox {
+
     private final static String FONT = "BULLSEYE";
     private final static Paint COLOR = Paint.valueOf("#0d7377");
     private final static String FONT_SIZE = "20";
-    
+
     private String name;
-    
+
     private final FontAwesomeIconView icon;
     private final Label label;
     private final ArrayList<Edge> edges;
-    
+    private Graph.Node node;
+
     public Vertex(String name) {
         edges = new ArrayList();
         this.name = name;
@@ -35,11 +38,11 @@ public class Vertex extends VBox{
         this.getChildren().add(label);
         this.setAlignment(Pos.CENTER);
     }
-    
+
     public void viewName() {
         label.setVisible(true);
     }
-    
+
     public void hideName() {
         label.setVisible(false);
     }
@@ -55,24 +58,31 @@ public class Vertex extends VBox{
 
     public void setName(String name) {
         this.name = name;
-    } 
-    
+    }
+
     public void addEdge(Edge edge) {
         edges.add(edge);
     }
-    
+
     public void deleteEdge(Edge edge) {
         edges.remove(edge);
     }
-    
+
     public ArrayList<Edge> getEdges() {
         return edges;
     }
-    
+
     public void unlink() {
-        edges.forEach((edge) -> {
-            Canvas.deleteEdge(edge);
-        });
-        edges.clear();
+        while (edges.size() > 0) {
+            Canvas.deleteEdge(edges.get(0));
+        }
+    }
+
+    public void setNode(Graph.Node node) {
+        this.node = node;
+    }
+
+    public Graph.Node getNode() {
+        return node;
     }
 }

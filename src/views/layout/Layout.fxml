@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minWidth="-Infinity" prefHeight="414.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.layout.LayoutController">
+   <children>
+      <AnchorPane fx:id="main" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane fx:id="outer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox fx:id="container" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #323232;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <HBox alignment="CENTER" style="-fx-background-color: #212121;">
+                                 <effect>
+                                    <DropShadow radius="4.75" width="0.0" />
+                                 </effect>
+                                 <children>
+                                    <JFXButton fx:id="home" alignment="CENTER" contentDisplay="CENTER" minHeight="60.0" prefWidth="100.0" ripplerFill="#0d7377" style="-fx-background-radius: 10; -fx-border-color: #0d7377; -fx-border-width: 0 0 3 0;" textFill="#212121" HBox.hgrow="ALWAYS">
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="homeIcon" fill="#0d7377" glyphName="HOME" size="30" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="info" alignment="CENTER" contentDisplay="CENTER" layoutX="184.0" layoutY="15.0" minHeight="60.0" prefWidth="100.0" ripplerFill="#0d7377" style="-fx-background-radius: 10; -fx-border-color: #424874; -fx-border-width: 0 0 0 0;" textFill="#212121">
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="infoIcon" fill="WHITE" glyphName="INFO" size="30" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="code" alignment="CENTER" contentDisplay="CENTER" layoutX="234.0" layoutY="15.0" minHeight="60.0" prefWidth="100.0" ripplerFill="#0d7377" style="-fx-background-radius: 10; -fx-border-color: #424874; -fx-border-width: 0 0 0 0;" textFill="#212121">
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="codeIcon" fill="WHITE" glyphName="CODE" size="30" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="creators" alignment="CENTER" contentDisplay="CENTER" layoutX="284.0" layoutY="15.0" minHeight="60.0" prefWidth="100.0" ripplerFill="#0d7377" style="-fx-background-radius: 10; -fx-border-color: #424874; -fx-border-width: 0 0 0 0;" textFill="#212121">
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="creatorsIcon" fill="WHITE" glyphName="USERS" size="30" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="off" alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="15.0" minHeight="60.0" prefWidth="100.0" ripplerFill="#0d7377" style="-fx-background-radius: 10; -fx-border-color: #424874; -fx-border-width: 0 0 0 0;" textFill="#212121">
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="offIcon" fill="WHITE" glyphName="POWER_OFF" size="30" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <VBox fx:id="container" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin></VBox>
+                              <HBox alignment="CENTER" style="-fx-background-color: #212121;">
+                                 <children>
+                                    <Label text="Made with " textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#0d7377" glyphName="HEART" size="20">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </FontAwesomeIconView>
+                                    <Label text=" by " textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Khaders" textFill="#0d7377">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="alert" prefHeight="0.0" prefWidth="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
