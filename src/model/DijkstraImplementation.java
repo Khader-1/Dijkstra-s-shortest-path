@@ -31,20 +31,33 @@ public class DijkstraImplementation {
             checkPoints.add(checkPoint);
         }
         if (vals.length > 0) {
+            System.out.print("   ");
+            for (CheckPoint checkPoint : checkPoints) {
+                System.out.print(checkPoint.node.getName() + "    ");
+            }
+            System.out.println();
             for (int i = 0; i < vals.length; i++) {
+                System.out.print(current.node.getName() + " ");
                 double min = Double.MAX_VALUE;
                 CheckPoint temp = null;
+                int count = 0;
                 for (CheckPoint checkPoint : checkPoints) {
-                    System.out.println(checkPoint.node.getName() + " " + current.node.getName());
-                    double val = checkPoint.assign(graph.getVal(current.node, checkPoint.node), current);
-                    System.out.println(val);
+                    double val = checkPoint.assign(current.val + graph.getVal(current.node, checkPoint.node), current);
+                    System.out.print((val != Double.MAX_VALUE ? val + checkPoint.previous.node.getName() : " f  ") + " ");
+                    vals[i][count++] = val;
                     if (val < min) {
                         min = val;
                         temp = checkPoint;
                     }
                 }
-                current.finalized = true;
+                System.out.println();
+                if (current != null) {
+                    current.finalized = true;
+                }
                 current = temp;
+                if (current != null) {
+                    current.finalized = true;
+                }
             }
         }
     }
@@ -82,14 +95,13 @@ public class DijkstraImplementation {
             if (finalized) {
                 return Double.MAX_VALUE;
             }
-            System.out.println("val = " + val);
             if (val != 0) {
                 if (val < this.val || this.val == 0) {
                     this.val = val;
                     previous = source;
                 }
             }
-            return this.val;
+            return this.val == 0 ? Double.MAX_VALUE : this.val;
         }
     }
 }
