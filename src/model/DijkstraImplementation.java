@@ -21,6 +21,7 @@ public class DijkstraImplementation {
     }
 
     public void init(Graph.Node start) {
+        System.out.println(graph.toString());
         this.start = start;
         checkPoints = new HashSet();
         for (Graph.Node node : graph.getNodes()) {
@@ -42,7 +43,8 @@ public class DijkstraImplementation {
                 CheckPoint temp = null;
                 int count = 0;
                 for (CheckPoint checkPoint : checkPoints) {
-                    double val = checkPoint.assign(current.val + graph.getVal(current.node, checkPoint.node), current);
+                    double relative = graph.getVal(current.node, checkPoint.node);
+                    double val = checkPoint.assign(relative == 0 ? 0 : current.val + relative, current);
                     System.out.print((val != Double.MAX_VALUE ? val + checkPoint.previous.node.getName() : " f  ") + " ");
                     vals[i][count++] = val;
                     if (val < min) {
