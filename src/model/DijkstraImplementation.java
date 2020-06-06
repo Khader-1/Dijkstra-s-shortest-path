@@ -2,6 +2,11 @@ package model;
 
 import java.util.HashSet;
 import java.util.Set;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  *
@@ -20,10 +25,15 @@ public class DijkstraImplementation {
         vals = new double[graph.getSize()][graph.getSize()];
     }
 
-    public void init(Graph.Node start) {
+    public void init(Graph.Node start, VBox data) {
         System.out.println(graph.toString());
         this.start = start;
         checkPoints = new HashSet();
+        data.getChildren().clear();
+        HBox row = new HBox();
+        row.setAlignment(Pos.CENTER);
+        row.setPadding(new Insets(0, 0, 0, 50));
+        data.getChildren().add(row);
         for (Graph.Node node : graph.getNodes()) {
             CheckPoint checkPoint = new CheckPoint(node);
             if (node.equals(start)) {
@@ -35,9 +45,14 @@ public class DijkstraImplementation {
             System.out.print("   ");
             for (CheckPoint checkPoint : checkPoints) {
                 System.out.print(checkPoint.node.getName() + "    ");
+                row.getChildren().add(Graph.design(new Label(checkPoint.node.getName())));
             }
             System.out.println();
             for (int i = 0; i < vals.length; i++) {
+                row = new HBox();
+                row.setAlignment(Pos.CENTER);
+                data.getChildren().add(row);
+                row.getChildren().add(Graph.design(new Label(current.node.getName())));
                 System.out.print(current.node.getName() + " ");
                 double min = Double.MAX_VALUE;
                 CheckPoint temp = null;
@@ -45,7 +60,9 @@ public class DijkstraImplementation {
                 for (CheckPoint checkPoint : checkPoints) {
                     double relative = graph.getVal(current.node, checkPoint.node);
                     double val = checkPoint.assign(relative == 0 ? 0 : current.val + relative, current);
+                    String num = (val != Double.MAX_VALUE ? val + checkPoint.previous.node.getName() : "f");
                     System.out.print((val != Double.MAX_VALUE ? val + checkPoint.previous.node.getName() : " f  ") + " ");
+                    row.getChildren().add(Graph.design(new Label(num)));
                     vals[i][count++] = val;
                     if (val < min) {
                         min = val;
@@ -62,20 +79,6 @@ public class DijkstraImplementation {
                 }
             }
         }
-    }
-
-    @Override
-    public String toString() {
-        String line = "";
-        for (CheckPoint checkPoint : checkPoints) {
-            System.out.print(checkPoint.node.getName() + " " + checkPoint.val);
-            while (checkPoint.previous != null) {
-                checkPoint = checkPoint.previous;
-                System.out.println(" -> " + checkPoint.node.getName() + " " + checkPoint.val);
-            }
-            System.out.println("\n");
-        }
-        return "";
     }
 
     private static class CheckPoint {

@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import model.DijkstraImplementation;
 import model.Graph;
 import views.canvas.Canvas;
@@ -27,6 +28,9 @@ public class HomeController implements Initializable {
     JFXButton play, reset, selectStart;
     
     private DijkstraImplementation implementation;
+    
+    @FXML
+    VBox adjTable, data;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,8 +47,8 @@ public class HomeController implements Initializable {
             Graph graph = Canvas.store();
             DijkstraImplementation implementation = new DijkstraImplementation(graph);
             this.implementation = implementation;
-            implementation.init(graph.getNode(0));
-//            implementation.toString();
+            implementation.init(graph.getNode(0), data);
+            graph.view(adjTable);
         });
         reset.setOnMouseClicked((event) -> {
             Canvas.reset();

@@ -1,5 +1,13 @@
 package model;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+
 /**
  *
  * @author Khader
@@ -58,6 +66,36 @@ public class Graph {
         graph[node1.index][node2.index] = val;
         graph[node2.index][node1.index] = val;
 
+    }
+
+    public void view(VBox data) {
+        data.getChildren().clear();
+        HBox box = new HBox();
+        box.setAlignment(Pos.CENTER);
+        data.getChildren().add(box);
+        box.setPadding(new Insets(0, 0, 0, 50));
+        for (Node node : nodes) {
+            box.getChildren().add(design(new Label(node.getName())));
+        }
+        for (int i = 0; i < graph.length; i++) {
+            box = new HBox();
+            box.setAlignment(Pos.CENTER);
+            data.getChildren().add(box);
+            box.getChildren().add(design(new Label(nodes[i].getName())));
+            for (int j = 0; j < graph.length; j++) {
+                box.getChildren().add(design(new Label(graph[i][j] + "")));
+            }
+        }
+    }
+
+    public static Label design(Label label) {
+        label.setMinWidth(50);
+        label.setAlignment(Pos.CENTER);
+        label.setPrefHeight(30);
+        label.setFont(new Font(20));
+        label.setTextFill(Paint.valueOf("#0d7377"));
+        label.setStyle("-fx-border-color : #0d7377;");
+        return label;
     }
 
     public static class Node {

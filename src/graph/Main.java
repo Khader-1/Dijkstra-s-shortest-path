@@ -33,7 +33,6 @@ public class Main extends Application {
         stage.setHeight(800);
         stage.centerOnScreen();
         Main.stage = stage;
-        System.out.println("kk");
     }
 
     public static void main(String[] args) {
