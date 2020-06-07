@@ -14,7 +14,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxWidth="1.7976931348623157E308" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.layout.HomeController">
    <children>
       <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" style="-fx-background-color: #323232;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -148,45 +147,99 @@
                               </VBox>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="672.0" layoutY="500.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #212121; -fx-background-radius: 5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="520.0">
+                        <AnchorPane layoutX="672.0" layoutY="500.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: #212121; -fx-background-radius: 5;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="520.0">
                            <effect>
                               <DropShadow color="#0d727533" />
                            </effect>
                            <children>
-                              <JFXButton fx:id="play" layoutX="347.0" layoutY="23.0" text="Calc" textFill="#0d7377" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="15.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <graphic>
-                                    <FontAwesomeIconView fill="#0d7377" glyphName="PLAY" size="18" />
-                                 </graphic>
-                              </JFXButton>
-                              <Label layoutX="50.0" layoutY="46.0" text="Start point : " textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                              <HBox layoutX="50.0" layoutY="15.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <JFXButton fx:id="selectDest" text="select dest" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="MAP_MARKER" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="selectStart" text="Select Start" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="STREET_VIEW" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="reset" text="Reset" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="REPEAT" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="play" text="Calc" textFill="#0d7377">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#0d7377" glyphName="PLAY" size="18" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <Label layoutY="-226.0" text="Destination :" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="60.0" layoutY="10.0" text="a" textFill="#0d7377" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="0.0">
+                              <Label fx:id="startName" layoutX="105.0" layoutY="-226.0" text="a" textFill="#0d7377" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <JFXButton fx:id="reset" layoutX="480.0" layoutY="25.0" text="Reset" textFill="#0d7377" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="15.0">
+                              <Label layoutX="125.0" layoutY="-226.0" text="Path :" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="110.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
-                                 <graphic>
-                                    <FontAwesomeIconView fill="#0d7377" glyphName="REPEAT" size="18" />
-                                 </graphic>
-                              </JFXButton>
-                              <JFXButton fx:id="selectStart" layoutX="393.0" layoutY="25.0" text="Select Start" textFill="#0d7377" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="15.0">
+                              </Label>
+                              <Label fx:id="path" layoutX="170.0" layoutY="-226.0" text="a" textFill="#0d7377" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="110.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
-                                 <graphic>
-                                    <FontAwesomeIconView fill="#0d7377" glyphName="STREET_VIEW" size="18" />
-                                 </graphic>
-                              </JFXButton>
+                              </Label>
+                              <Label layoutX="158.0" layoutY="-211.0" text="Start point : " textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destName" layoutX="258.0" layoutY="-211.0" text="b" textFill="#0d7377" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="210.0" layoutY="80.0" text="Cost :" textFill="WHITE" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cost" layoutX="165.0" layoutY="80.0" text="15" textFill="#0d7377" AnchorPane.leftAnchor="405.0" AnchorPane.topAnchor="70.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                         <Label layoutX="171.0" layoutY="50.0" text="Work Space" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="30.0">

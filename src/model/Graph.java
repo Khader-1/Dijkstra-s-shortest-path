@@ -92,7 +92,7 @@ public class Graph {
         label.setMinWidth(50);
         label.setAlignment(Pos.CENTER);
         label.setPrefHeight(30);
-        label.setFont(new Font(20));
+        label.setFont(new Font(18));
         label.setTextFill(Paint.valueOf("#0d7377"));
         label.setStyle("-fx-border-color : #0d7377;");
         return label;

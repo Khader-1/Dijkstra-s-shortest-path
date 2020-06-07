@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.about.About">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="77.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #323232;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: #323232;">
+               <children>
+                  <AnchorPane maxWidth="1000.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Line endX="300.0" endY="450.0" startX="550.0" startY="550.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <Line endX="300.0" endY="450.0" startX="200.0" startY="200.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <Line endX="850.0" endY="150.0" startX="550.0" startY="550.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <Line endX="850.0" endY="150.0" startX="200.0" startY="200.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <Line endX="850.0" endY="150.0" startX="300.0" startY="450.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <Circle fx:id="kmk" fill="#212121" layoutX="858.0" layoutY="310.0" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="350.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Circle fx:id="kjk" fill="#212121" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Circle fx:id="main" fill="#212121" layoutX="210.0" layoutY="230.0" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Circle fx:id="m" fill="#212121" layoutX="495.0" layoutY="710.0" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="450.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

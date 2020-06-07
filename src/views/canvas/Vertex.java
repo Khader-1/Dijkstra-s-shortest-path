@@ -85,4 +85,13 @@ public class Vertex extends VBox {
     public Graph.Node getNode() {
         return node;
     }
+
+    public Edge getEdge (String name) {
+        for (Edge edge : edges) {
+            if (edge.getFrom().getName().equals(name) || edge.getTo().getName().equals(name)) {
+                edge.highlight();
+            }
+        }
+        return null;
+    }
 }

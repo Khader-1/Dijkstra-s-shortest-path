@@ -104,4 +104,12 @@ public class Edge {
     public Label getLabel() {
         return label;
     }
+
+    public void highlight() {
+        line.setStroke(Paint.valueOf("#14ffec"));
+    }
+
+    public void unselect() {
+        line.setStroke(Paint.valueOf("#0d7377"));
+    }
 }

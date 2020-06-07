@@ -21,12 +21,12 @@ import model.Graph;
 
 public class Canvas implements Initializable {
 
-    private static Canvas refrence;
+    public static Canvas refrence;
 
     @FXML
     Pane canvas;
     @FXML
-    JFXButton vertex, move, delete, link, unlink, unlinkOne, change;
+    JFXButton vertex, move, delete, link, unlink, unlinkOne, change, selectStart;
     @FXML
     VBox container;
     @FXML
@@ -39,7 +39,7 @@ public class Canvas implements Initializable {
     private Vertex focused;
     private Edge focsedEdge;
 
-    private final Map<String, Vertex> verteces = new HashMap();
+    public final Map<String, Vertex> verteces = new HashMap();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

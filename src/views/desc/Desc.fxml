@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="313.0" layoutY="26.0" style="-fx-background-color: #323232;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="TOP_CENTER" style="-fx-background-color: #323232;">
+               <children>
+                  <VBox alignment="TOP_CENTER" maxWidth="585.0" prefWidth="100.0" style="-fx-background-color: #323232;">
+                     <children>
+                        <Label prefWidth="800.0" text="Dijkstra's Algorithm" textFill="WHITE">
+                           <font>
+                              <Font name="Kristen ITC" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="70.0" top="50.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefWidth="800.0" text="#How Does it works" textFill="#0d7377">
+                           <font>
+                              <Font name="Arial Nova" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="30.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="92.0" minHeight="80.0" text="finds the least expensive path in a weighted graph between our starting node and a destination node" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="147.0" minHeight="70.0" text="allows you to calculate the shortest path between one node (you pick which one) and every other node in the graph." textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="9.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="207.0" prefHeight="40.0" prefWidth="596.0" text="Its also known as  Dijkstra's Shortest Path First algorithm, SPF algorithm" textFill="#212121" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="147.0" minHeight="65.0" text="let's study the algorithm with an explained example! Let's calculate the shortest path between node C and the other nodes in our graph:" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label layoutX="10.0" layoutY="337.0" minHeight="65.0" text="During the algorithm execution, we'll mark every node with its minimum distance to node C (our selected node) " textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="799.0" minHeight="65.0" prefWidth="500.0" text="-&gt; For node C, this distance is 0" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="864.0" minHeight="65.0" prefWidth="500.0" text="-&gt; For the rest of nodes, as we still don't know that minimum distance, it starts being infinity (∞)" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="59.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="10.0" layoutY="799.0" minHeight="65.0" text="We'll also have a current node. Initially, we set it to C (our selected node). In the image, we mark the current node with a red dot" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="1345.0" minHeight="65.0" prefWidth="500.0" text="We'll also have a current node. Initially, we set it to C (our selected node). In the image, we mark the current node with a red dot" textFill="#14ffec" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="864.0" minHeight="65.0" prefWidth="500.0" text="#We add the minimum distance of the current node (in this case, 0) with the weight of the edge that connects our current node with B (in this case, 7), and we obtain 0 + 7 = 7." textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="1490.0" minHeight="65.0" prefWidth="500.0" text="#We compare that value with the minimum distance of B (infinity), the lowest value is the one that remains as the minimum distance of B (in this case, 7 is less than infinity)" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="59.0" layoutY="994.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph3.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="59.0" layoutY="1410.0" minHeight="65.0" prefWidth="500.0" text="Repeat the same procedure for D, A" textFill="#14ffec" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="1490.0" minHeight="65.0" prefWidth="500.0" text="We have checked all the neighbors of C. Because of that, we mark it as visited. Let's represent visited nodes with a green check mark" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="530.0" layoutX="59.0" layoutY="1650.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph4.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="59.0" layoutY="2064.0" minHeight="65.0" text="We now need to pick a new current node. That node must be the unvisited node with the smallest minimum distance (so, the node with the smallest number and no check mark). That's A" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="2064.0" minHeight="65.0" text="And now we repeat the algorithm. We check the neighbors of our current node (A) , ignoring the visited nodes. This means we only check B." textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="1999.0" minHeight="110.0" prefWidth="500.0" text="For B, we add 1 (the minimum distance of A, our current node) with 3 (the weight of the edge connecting A and B) to obtain 4. We compare that 4 with the minimum distance of B (7) and leave the smallest value (4)" textFill="#14ffec" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="530.0" layoutX="44.0" layoutY="2129.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph5.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="10.0" layoutY="2569.0" minHeight="65.0" text="we mark A as visited and pick a new current node B, which is the non-visited node with the smallest current distance" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="3083.0" minHeight="65.0" prefWidth="570.0" text="We repeat the algorithm again. This time, we check E and D neighbors of our current node (B)" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="2634.0" minHeight="70.0" prefWidth="500.0" text="For D, we obtain 4 + 5 = 9. We compare that value with B's minimum distance (2) and leave the smallest value (2)" textFill="#14ffec" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="3213.0" minHeight="70.0" prefWidth="500.0" text="For E, we obtain 4+ 1 = 5 compare it with the minimum distance of E (infinity) and leave the smallest one (5)." textFill="#14ffec" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="530.0" layoutX="38.0" layoutY="2744.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph6.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="10.0" layoutY="3083.0" minHeight="65.0" text="we mark B as visited and pick a new current node D, which is the non-visited node with the smallest current distance" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="3688.0" minHeight="65.0" text="Almost there. We only need to check E. 2+ 7 = 9, We compare that value with D's minimum distance (5) and leave the smallest value (5)" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="3283.0" minHeight="70.0" prefWidth="500.0" text="E doesn't have any non-visited neighbors, so we don't need to check anything. We mark it as visited." textFill="#14ffec" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="3818.0" minHeight="70.0" prefWidth="500.0" text="As there are not unvisited nodes, we're done! The minimum distance of each node now actually represents the minimum distance from that node to node C " textFill="#0d7275" wrapText="true">
+                           <font>
+                              <Font name="Arial Nova" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="500.0" fitWidth="530.0" layoutX="38.0" layoutY="3353.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/graph7.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="10.0" layoutY="92.0" prefWidth="800.0" text="#By Mohammed Mahjoub" textFill="#0d7377">
+                           <font>
+                              <Font name="Arial Nova" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" top="30.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
