@@ -54,7 +54,9 @@ public class LayoutController implements Initializable {
     private FontAwesomeIconView offIcon;
     @FXML
     private AnchorPane alert;
-    
+
+    private static Node progress;
+
     private final Map<JFXButton, FontAwesomeIconView> nav = new HashMap();
 
     /**
@@ -84,22 +86,23 @@ public class LayoutController implements Initializable {
             reference.container.getChildren().clear();
             reference.container.getChildren().add(node);
             VBox.setVgrow(node, Priority.ALWAYS);
-            
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
 
     }
-    
+
     public static void select(JFXButton button, FontAwesomeIconView icon) {
         button.setStyle("-fx-background-radius : 10; -fx-border-color :  #0d7377; -fx-border-width :  0 0 3 0;");
         icon.setFill(Paint.valueOf("#0d7377"));
     }
+
     public static void unSelect(JFXButton button, FontAwesomeIconView icon) {
         button.setStyle("-fx-background-radius : 10; -fx-border-color :  #0d7377; -fx-border-width :  0 0 0 0;");
         icon.setFill(Paint.valueOf("#ffffff"));
     }
-    
+
     public void ref(JFXButton button, FontAwesomeIconView icon, String path) {
         nav.put(button, icon);
         button.setOnMouseClicked((event) -> {
