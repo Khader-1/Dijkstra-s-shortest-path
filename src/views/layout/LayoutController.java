@@ -72,6 +72,9 @@ public class LayoutController implements Initializable {
         ref(info, infoIcon, "desc/Desc");
         ref(creators, creatorsIcon, "about/About");
         ref(off, offIcon, "layout/Home");
+        off.setOnMouseClicked((event) -> {
+            System.exit(0);
+        });
     }
 
     public static void route(String path) {

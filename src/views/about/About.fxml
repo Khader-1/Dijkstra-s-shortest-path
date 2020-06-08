@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.about.About">
    <children>
@@ -20,21 +21,67 @@
                         <Insets />
                      </VBox.margin>
                      <children>
-                        <Line endX="300.0" endY="450.0" startX="550.0" startY="550.0" stroke="#0d7377" strokeWidth="10.0" />
-                        <Line endX="300.0" endY="450.0" startX="200.0" startY="200.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <AnchorPane fx:id="mmContainer" layoutX="190.0" layoutY="340.0" prefHeight="270.0" prefWidth="500.0" style="-fx-background-color: #212121; -fx-background-radius: 20;" visible="false" AnchorPane.leftAnchor="430.0" AnchorPane.topAnchor="430.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Circle fx:id="main1111" fill="#212121" radius="105.0" stroke="#323232" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <Label layoutX="55.0" layoutY="45.0" text="Mohammed Mahjoub" textFill="#14ffec" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="60.0" text="muhammedmahjoub2001@gmail.com" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="160.0" text="ISSE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="110.0" text="Algorithm analysis expert" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="170.0" text="+970-592525490" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="180.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
                         <Line endX="850.0" endY="150.0" startX="550.0" startY="550.0" stroke="#0d7377" strokeWidth="10.0" />
                         <Line endX="850.0" endY="150.0" startX="200.0" startY="200.0" stroke="#0d7377" strokeWidth="10.0" />
                         <Line endX="850.0" endY="150.0" startX="300.0" startY="450.0" stroke="#0d7377" strokeWidth="10.0" />
-                        <Circle fx:id="kmk" fill="#212121" layoutX="858.0" layoutY="310.0" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="350.0">
+                        <AnchorPane fx:id="mainContainer" layoutX="575.0" layoutY="36.0" prefHeight="270.0" prefWidth="500.0" style="-fx-background-color: #212121; -fx-background-radius: 20;" visible="false" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                            <effect>
                               <DropShadow />
                            </effect>
-                        </Circle>
-                        <Circle fx:id="kjk" fill="#212121" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
-                           <effect>
-                              <DropShadow />
-                           </effect>
-                        </Circle>
+                           <children>
+                              <Circle fx:id="main1" fill="#212121" radius="105.0" stroke="#323232" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <Label layoutX="55.0" layoutY="45.0" text="Dr. Akram Radwan" textFill="#14ffec" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="60.0" text="aradwan@ucas.edu.ps" textFill="#0d7377" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="140.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="160.0" text="Discrete Mathematics lecturer" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="100.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Line endX="300.0" endY="450.0" startX="550.0" startY="550.0" stroke="#0d7377" strokeWidth="10.0" />
+                        <Line endX="300.0" endY="450.0" startX="200.0" startY="200.0" stroke="#0d7377" strokeWidth="10.0" />
                         <Circle fx:id="main" fill="#212121" layoutX="210.0" layoutY="230.0" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                            <effect>
                               <DropShadow />
@@ -45,9 +92,88 @@
                               <DropShadow />
                            </effect>
                         </Circle>
+                        <AnchorPane fx:id="kmkContainer" layoutX="90.0" layoutY="90.0" prefHeight="270.0" prefWidth="500.0" style="-fx-background-color: #212121; -fx-background-radius: 20;" visible="false" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="330.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Circle fx:id="main111" fill="#212121" radius="105.0" stroke="#323232" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                              <Label layoutX="55.0" layoutY="45.0" text="Khader M Khudair" textFill="#14ffec" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="60.0" text="kkhudair1@ucas.edu.ps" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="160.0" text="ISSE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="110.0" text="Team Leader" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="170.0" text="+972-597783891" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="180.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Circle fx:id="kmk" fill="#212121" layoutX="858.0" layoutY="310.0" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="350.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <AnchorPane fx:id="kjkContainer" layoutX="478.0" layoutY="40.0" prefHeight="270.0" prefWidth="500.0" style="-fx-background-color: #212121; -fx-background-radius: 20;" visible="false" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="80.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Label layoutX="55.0" layoutY="45.0" text="Khader Jaber Karaja" textFill="#14ffec" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="60.0" text="kkaraja@ucas.edu.ps" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="160.0" text="ISSE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="110.0" text="Core model coder" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="260.0" layoutY="170.0" text="+972-595454910" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="180.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Circle fx:id="main11" fill="#212121" radius="105.0" stroke="#323232" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <Circle fx:id="kjk" fill="#212121" radius="100.0" stroke="#14ffec" strokeType="INSIDE" strokeWidth="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
                      </children>
                   </AnchorPane>
                </children>
+               <padding>
+                  <Insets bottom="100.0" />
+               </padding>
             </VBox>
          </content>
       </ScrollPane>
