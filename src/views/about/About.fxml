@@ -32,12 +32,12 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="50.0" layoutY="60.0" text="muhammedmahjoub2001@gmail.com" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
+                              <Label layoutX="50.0" layoutY="60.0" text="mmahjoub@smail.ucas.edu.ps" textFill="#0d7377" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="50.0" layoutY="160.0" text="ISSE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
+                              <Label layoutX="50.0" layoutY="160.0" text="CISE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -68,14 +68,24 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="50.0" layoutY="60.0" text="aradwan@ucas.edu.ps" textFill="#0d7377" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="140.0">
+                              <Label layoutX="40.0" layoutY="154.0" text="aradwan@ucas.edu.ps" textFill="#0d7377" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="160.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="50.0" layoutY="160.0" text="Discrete Mathematics lecturer" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="100.0">
+                              <Label layoutX="50.0" layoutY="160.0" text="Discrete Mathematics lecturer" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="140.0">
                                  <font>
                                     <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="150.0" text="Abu Hamza" textFill="#0d7377" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="150.0" text="UCAS Academic Deputy Assistant" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                    <Font size="15.0" />
                                  </font>
                               </Label>
                            </children>
@@ -108,7 +118,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="50.0" layoutY="160.0" text="ISSE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
+                              <Label layoutX="50.0" layoutY="160.0" text="CISE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -135,7 +145,7 @@
                               <DropShadow />
                            </effect>
                            <children>
-                              <Label layoutX="55.0" layoutY="45.0" text="Khader Jaber Karaja" textFill="#14ffec" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0">
+                              <Label layoutX="55.0" layoutY="45.0" text="Khader Jber Karaja" textFill="#14ffec" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -145,7 +155,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="50.0" layoutY="160.0" text="ISSE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
+                              <Label layoutX="50.0" layoutY="160.0" text="CISE Student" textFill="WHITE" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="90.0">
                                  <font>
                                     <Font size="16.0" />
                                  </font>

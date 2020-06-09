@@ -29,7 +29,7 @@ public class DijkstraImplementation {
     }
 
     public void init(Graph.Node start, VBox data) {
-        System.out.println(graph.toString());
+//        System.out.println(graph.toString());
         this.start = start;
         checkPoints = new HashSet();
         data.getChildren().clear();
@@ -45,18 +45,18 @@ public class DijkstraImplementation {
             checkPoints.add(checkPoint);
         }
         if (vals.length > 0) {
-            System.out.print("   ");
+//            System.out.print("   ");
             for (CheckPoint checkPoint : checkPoints) {
-                System.out.print(checkPoint.node.getName() + "    ");
+//                System.out.print(checkPoint.node.getName() + "    ");
                 row.getChildren().add(Graph.design(new Label(checkPoint.node.getName())));
             }
-            System.out.println();
+//            System.out.println();
             for (int i = 0; i < vals.length; i++) {
                 row = new HBox();
                 row.setAlignment(Pos.CENTER);
                 data.getChildren().add(row);
                 row.getChildren().add(Graph.design(new Label(current.node.getName())));
-                System.out.print(current.node.getName() + " ");
+//                System.out.print(current.node.getName() + " ");
                 double min = Double.MAX_VALUE;
                 CheckPoint temp = null;
                 Label minCell = null;
@@ -66,7 +66,7 @@ public class DijkstraImplementation {
                     double val = checkPoint.assign(relative == 0 ? 0 : current.val + relative, current);
                     String prev = checkPoint.previous == null ? "" : checkPoint.previous.node.getName();
                     String num = checkPoint.finalized || checkPoint.node.equals(start) ? checkPoint.val + prev : (checkPoint.val == 0 ? "--" : val + prev);
-                    System.out.print((val != Double.MAX_VALUE ? val + checkPoint.previous.node.getName() : " f  ") + " ");
+//                    System.out.print((val != Double.MAX_VALUE ? val + checkPoint.previous.node.getName() : " f  ") + " ");
                     Label cell = Graph.design(new Label(num));
                     if (checkPoint.finalized || checkPoint.node.equals(start)) {
                         cell.setStyle("-fx-background-color : #323232; -fx-border-color : #0d7377;");
@@ -79,7 +79,7 @@ public class DijkstraImplementation {
                         minCell = cell;
                     }
                 }
-                System.out.println();
+//                System.out.println();
                 if (current != null) {
                     current.finalized = true;
                 }
@@ -132,7 +132,7 @@ public class DijkstraImplementation {
         }
         for (CheckPoint checkPoint : checkPoints) {
             if (checkPoint.node.getName().equals(name)) {
-                System.out.print(checkPoint.node.getName());
+//                System.out.print(checkPoint.node.getName());
                 String temp = checkPoint.node.getName();
                 labels[2].setText(checkPoint.val + "");
                 while (true) {
@@ -144,9 +144,9 @@ public class DijkstraImplementation {
                     Canvas.refrence.verteces.get(temp).getEdge(currentName);
                     labels[3].setText(currentName + " -> " + labels[3].getText());
                     temp = currentName;
-                    System.out.print(" -> " + checkPoint.node.getName());
+//                    System.out.print(" -> " + checkPoint.node.getName());
                 }
-                System.out.println();
+//                System.out.println();
                 break;
             }
         }

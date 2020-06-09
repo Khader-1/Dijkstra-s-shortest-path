@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -125,12 +126,11 @@ public class Canvas implements Initializable {
             if (event.getCode().equals(KeyCode.ENTER)) {
                 hideOptions();
                 if ("".equals(value.getText()) || !(value.getText().matches("\\d*\\.?\\d*"))) {
-                    System.out.println("error");
+                    HomeController.showAlert("Invalid number format");
                 } else {
                     double val = Double.parseDouble(value.getText());
-                    System.out.println(val);
                     if (val <= 0) {
-                        System.out.println("error");
+                        HomeController.showAlert("Number cannot be less than 0...");
                     } else {
                         focsedEdge.setVal(val);
                     }
@@ -268,5 +268,9 @@ public class Canvas implements Initializable {
                 edge.unselect();
             });
         });
+    }
+    
+    public void trying() {
+        ListView<Vertex> list = new ListView();
     }
 }
